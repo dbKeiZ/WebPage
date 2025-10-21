@@ -7,7 +7,7 @@ const path = require('path')
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const filePath = path.join(process.cwd(), "../visitors.csv");
+const filePath = path.join(process.cwd(), "visitors.csv");
 if (!fs.existsSync(filePath)) {
   fs.writeFileSync(filePath, "ip,timestamp\n");
 }
