@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Smarter Funnels</title>
+    <link rel="stylesheet" type="text/css" href="default.css"/>
+
+    <meta name="description" content=". Email Forms">
+        <meta name="keywords" content="Discover how the Sales Funnel connects to economics and the key concepts that underpin why funnels work.">
+        <script src="//ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
+<script type="text/javascript">
+    require([
+        "dojo/query",
+        "dojo/dom",
+        "dojo/dom-geometry",
+        "dojo/dom-class",
+        "dojo/dom-style",
+        "dojo/dom-construct",
+        "dijit/focus",
+        "dojo/parser",
+        "dijit/form/DateTextBox",
+        "dojo/NodeList-traverse",
+        "dojo/domReady!"
+    ], function(query, dom, domGeom, domClass, domStyle, domConstruct, focusUtil, parser){
+
+        // Move the focused-field class to the field-group that contains the focused input.
+        var handle = focusUtil.watch("curNode", function(name, oldValue, newValue){
+            var parent = query(newValue).closest('.field-group');
+            if(!domClass.contains(parent, "focused-field")) {
+                query('.focused-field').removeClass('focused-field');
+                parent.addClass('focused-field');
+            } });
+
+        // Add error class to parent wrapper and only show error borders on empty fields in addresses
+        query('.feedback.error').closest('.field-group').addClass('error');
+        query('.addressfield input:text[value=""]').addClass('empty');
+
+        // Focus first input of birthdayfield or phonefield-us when parent wrapper is clicked
+        query('div.subfields').on("click", function(e){
+            var firstInput = query('input', e.target)[0];
+            focusUtil.focus(firstInput);
+        });
+
+        // Use native checkboxes and radio buttons outside the app
+        dojo.query(".radio input, .checkbox input").removeAttr("data-dojo-type");
+
+        // Render DateTextBoxes
+        parser.parse();
+
+        query('form').on("submit",function(e){
+            var invalidDate = dojo.query('.dijitTextBoxError');
+            if(invalidDate.length){
+                query('.dijitDateTextBox ~ .feedback.error').forEach(domConstruct.destroy);
+                invalidDate.forEach(function(node) {
+                    domConstruct.place('<div class="feedback error"><div class="errorText">Please enter a valid date</div></div>', node, 'after');
+                });
+                e.preventDefault();
+            } else if (window.bmak) {
+                // Bot manager telemetry data
+                window.bmak.form_submit();
+            } });
+    });
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <h1>Grow Smarter with High Converting Funnels</h1>
+    <p>Align your sales funnel with your brand to deliver better sales results.</p>
+    <section class="mainContent">
+        <div class="advertisement">
+            <img fetchpriority="high" decoding="async" width="1630" height="603" src="./images/ATF Webpage.png" alt="Best Awesome Sales Funnel and Strategies" srcset="" sizes="(max-width: 1630px) 100vw, 1630px" /> 
+            </div> </section>
+            
+    <a class="wp-block-button__link" href="https://m.me/keisuke789z/">Direct Message Me On Facebook</a><br><br>     
+          
+        <div class="wrapper rounded6" id="templateContainer">
+		    <h2 class="masthead">Discover how the Sales Funnel connects to economics and the key concepts that underpin <span class="heading-1">why funnels work.</span></h2>
+		    <div id="templateBody" class="bodyContent rounded6">
+        <div id="subscribeFormWelcome">Join Our Mailing List & receive one free analytic essay occasionaly. I understand I can opt out any time.
+</div>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+
+<form action="https://gmail.us11.list-manage.com/subscribe/post" method="POST">
+    <input type="hidden" name="u" value="4158a7d27efdcb52d828e9ed6">
+    <input type="hidden" name="id" value="49719aa9dc">
+    
+    <!-- people should not fill these in and expect good things -->
+    <div class="field-shift" aria-label="Please leave the following three fields empty" aria-hidden="true">
+        <label for="b_name">Name: </label>
+        <input type="text" name="b_name" tabindex="-1" value="" placeholder="Freddie" id="b_name">
+        <label for="b_email">Email: </label>
+        <input type="email" name="b_email" tabindex="-1" value="" placeholder="youremail@gmail.com" id="b_email">
+        <label for="b_comment">Comment: </label>
+        <textarea name="b_comment" tabindex="-1" placeholder="Please comment" id="b_comment"></textarea>
+    </div>
+
+    <div id="mergeTable" class="mergeTable">
+        <div class="mergeRow dojoDndItem mergeRow-radio" id="mergeRow-7">
+            <label for="MERGE7">Pick a Character that best describe yourself: <span class="req asterisk">*</span></label>
+            <div class="field-group">
+                <ul class="interestgroup_field radio-group" id="MERGE7"> <li> <label class="radio" for="MERGE7-0"> <input type="radio" data-dojo-type="dijit/form/RadioButton" name="MERGE7" id="MERGE7-0" value="Charismatic: Love attention; decide quickly, sometimes impulsively."  class="av-radio"> <span>Charismatic: Love attention; decide quickly, sometimes impulsively.</span> </label> </li><li> <label class="radio" for="MERGE7-1"> <input type="radio" data-dojo-type="dijit/form/RadioButton" name="MERGE7" id="MERGE7-1" value="Visionary: Take charge confidently; decide fast and firmly."  class="av-radio"> <span>Visionary: Take charge confidently; decide fast and firmly.</span> </label> </li><li> <label class="radio" for="MERGE7-2"> <input type="radio" data-dojo-type="dijit/form/RadioButton" name="MERGE7" id="MERGE7-2" value="Analytical: Observe quietly; decide slowly, weighing details."  class="av-radio"> <span>Analytical: Observe quietly; decide slowly, weighing details.</span> </label> </li><li> <label class="radio" for="MERGE7-3"> <input type="radio" data-dojo-type="dijit/form/RadioButton" name="MERGE7" id="MERGE7-3" value="Harmony: Stay calm; avoid conflict, choose the easy path."  class="av-radio"> <span>Harmony: Stay calm; avoid conflict, choose the easy path.</span> </label> </li> </ul>  
+            </div> 
+        </div>
+        
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-1">
+            <label for="MERGE1">First Name <span class="req asterisk">*</span></label>
+            <div class="field-group">
+                <input type="text" name="MERGE1" id="MERGE1" size="25" value="">  
+            </div>
+        </div>
+
+        <div class="mergeRow dojoDndItem mergeRow-text" id="mergeRow-2">
+            <label for="MERGE2">Last Name <span class="req asterisk">*</span></label>
+            <div class="field-group">
+                <input type="text" name="MERGE2" id="MERGE2" size="25" value=""> 
+            </div>  
+        </div>
+        
+        <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
+            <label for="MERGE0">Email Address <span class="req asterisk">*</span></label>
+            <div class="field-group">
+                <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">         
+            </div>           
+        </div>
+    </div>
+
+    <div class="submit_container clear">
+        <input type="submit" class="formEmailButton" name="submit" value="Subscribe">
+    </div>
+    <input type="hidden" name="ht" value="304301921221c2016fbc9604ff60c20a95fcec22:MTc2MDcyMzYwMi4yNjI1">
+    <input type="hidden" name="mc_signupsource" value="hosted">
+</form>
+		    </div>
+		</div>    
+		<div class="poweredWrapper">
+			<span class="poweredBy"><a href="https://login.mailchimp.com/signup/email-referral/?aid=4158a7d27efdcb52d828e9ed6"><img src="https://cdn-images.mailchimp.com/monkey_rewards/intuit-mc-rewards-2.png" border="0" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing" width="137" height="53" style="max-width: 100%; height: auto;"></a></span>
+		</div>
+    <script type="text/javascript"  src="/4tRRXq/3_/Ot/S9eL/Lz0X2C7FDMm-M/aYbELk4J4wf0Jh/MzF7RW8hCA/Hi/JIRjJBWC8"></script>
+        
+        
+    <footer class="footer">
+        <h6>Copyright &copy; <span id="current-year">2025</span> Kei Z. All Rights Reserved.</h6>
+        <p>For partnership or project enquiry, kindly email to <a href="mailto:keisuke789z@gmail.com">keisuke789z@gmail.com</a></p>
+    </footer>    
+</body>
+</html>

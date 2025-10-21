@@ -1,0 +1,13 @@
+package-lock.json
+package.json
+# dependencies
+/node_modules
+
+# local env files
+.env
+
+server.js
+
+visitors.csv
+
+default.css
