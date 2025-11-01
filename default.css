@@ -69,24 +69,6 @@ p {
 	font-family: "Fredoka";	
 }
 
-table {
-	border: 1px solid blue;
-	/* border-style: solid;
-	border-width: 1px;
-	border-spacing: 5px;
-	border-collapse: seperate; */
-	padding: 3px; 
-	width: 15%;
-	margin: 0.5% auto;
-	/* border-collapse: collapse; */
-}
-th, td {
-	border-style: solid; 
-	border-width: 1px;
-	border-spacing: 1px;
-	padding: 3px;
-}
-
 a:link,a:active,a:visited,a{
 	color:#336699; }
 a {
@@ -139,15 +121,12 @@ h3{
 .wp-block-button__link:hover {
 	text-decoration-line:none;
 	cursor: pointer;
-	/* -ms-zoom-animation: ; */
-	/* zoom:1.2; */
-	/* transform: scale(1.1); */
 	transform: rotateX(360deg);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 .wp-block-button__link {
 	transition: color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
-	color:#fff !important;background:#012040;border-radius:9999px;box-shadow:none;
+	color:#fff !important;background:#012040;border-radius:50px;box-shadow:none;
 	text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em;
 	letter-spacing: 0px;font-family: "Lato";font-style: normal;font-weight: 600;
 }
@@ -155,7 +134,7 @@ h3{
 	background:#32373c;color:#fff;text-decoration:none;
 }
 
-.mainContent {
+.hero-section {
 	display: flex;
 	justify-content: center;
 	/* width: 15%; */
@@ -175,7 +154,7 @@ h3{
 	background-color: white;
 }
 
-.advertisement {
+.hero-2 {
 	margin: 5px 0px 5px 0px;
 }
 

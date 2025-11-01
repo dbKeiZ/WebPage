@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grow Smarter Funnels</title>
     <link rel="stylesheet" type="text/css" href="default.css"/>
@@ -67,12 +67,11 @@
 <body>
     <h1>Grow Smarter with High Converting Funnels</h1>
     <p>Align your sales funnel with your brand to deliver better sales results.</p>
-    <section class="mainContent">
-        <div class="advertisement">
+    <section class="hero-section">
+        <div class="hero-2">
             <img fetchpriority="high" decoding="async" width="1630" height="603" src="./images/ATF Webpage.png" alt="Best Awesome Sales Funnel and Strategies" srcset="" sizes="(max-width: 1630px) 100vw, 1630px" /> 
-            </div> </section>
-            
-    <a class="wp-block-button__link" href="https://m.me/keisuke789z/">Direct Message Me On Facebook</a><br><br>     
+            <a class="wp-block-button__link" href="https://m.me/keisuke789z/">Direct Message Me On Facebook</a><br><br>    
+        </div> </section>   
           
         <div class="wrapper rounded6" id="templateContainer">
 		    <h2 class="masthead">Discover how the Sales Funnel connects to economics and the key concepts that underpin <span class="heading-1">why funnels work.</span></h2>
@@ -137,8 +136,28 @@
 			<span class="poweredBy"><a href="https://login.mailchimp.com/signup/email-referral/?aid=4158a7d27efdcb52d828e9ed6"><img src="https://cdn-images.mailchimp.com/monkey_rewards/intuit-mc-rewards-2.png" border="0" alt="Email Marketing Powered by Mailchimp" title="Mailchimp Email Marketing" width="137" height="53" style="max-width: 100%; height: auto;"></a></span>
 		</div>
     <script type="text/javascript"  src="/4tRRXq/3_/Ot/S9eL/Lz0X2C7FDMm-M/aYbELk4J4wf0Jh/MzF7RW8hCA/Hi/JIRjJBWC8"></script>
-        
-        
+    
+    <script>
+      fetch("https://ipapi.co/json/")
+        .then(response => response.json())
+        .then(data => {
+          const now = new Date().toISOString();
+            return fetch("/save", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                ip: data.ip,
+                timestamp: now,
+                city: data.city,
+                country: data.country_name,
+                latitude: data.latitude,
+                longitude: data.longitude
+            }) });
+        })
+        .then(res => console.log("Sent:", res.status))
+        .catch(err => console.error("Error sending to server:", err));
+    </script>
+
     <footer class="footer">
         <h6>Copyright &copy; <span id="current-year">2025</span> Kei Z. All Rights Reserved.</h6>
         <p>For partnership or project enquiry, kindly email to <a href="mailto:keisuke789z@gmail.com">keisuke789z@gmail.com</a></p>

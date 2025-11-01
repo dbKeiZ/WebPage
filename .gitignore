@@ -6,6 +6,4 @@ package.json
 # local env files
 .env
 
-visitors.csv
 
-default.css

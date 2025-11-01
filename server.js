@@ -1,27 +1,40 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const { Pool } = require("pg");
-const fs = require('fs');
-const path = require('path')
+const { createClient } = require("@supabase/supabase-js");
+require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
-const filePath = path.join(process.cwd(), "visitors.csv");
-if (!fs.existsSync(filePath)) {
-  fs.writeFileSync(filePath, "ip,timestamp\n");
-}
+const PORT = process.env.PORT || 3000;
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY,
+);
 
-app.get("/", (req, res) => {
-  const ip =
-    req.headers["x-forwarded-for"]?.split(",").shift() ||
-    req.socket?.remoteAddress;
+app.post("/save", async (req, res) => {
+  const { ip, timestamp, city, country, latitude, longitude } = req.body;
 
-  const timestamp = new Date().toISOString();
-  console.log("Visitor IP:", ip);
+  try {
+    const { error } = await supabase
+      .from("visitors")
+      .insert([{ ip, timestamp, city, country, latitude, longitude }]);
 
-  fs.appendFileSync(filePath, `${ip},${timestamp}\n`);
+    if (error) {
+      console.error("Supabase insert error:", error.message);
+      return res.status(500).json({ error: error.message });
+    }
 
-  res.sendFile(path.join(process.cwd(), "index.html"));
+    console.log("✅ Saved");
+    res.sendStatus(200);
+  } catch (err) {
+    console.error(err.name, ":", err.message);
+  }
 });
 
+app.use(express.static(__dirname));
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
+});
